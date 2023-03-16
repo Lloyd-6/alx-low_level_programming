@@ -1,9 +1,13 @@
-#!/bin/bash 
-echo "Size of a char: $(sizeof(char)) byte(s)"
-echo "Size of an int: $(sizeof(int)) byte(s)"
-echo "Size of a long int: $(sizeof(long int)) byte(s)"
-echo "Size of a long long int: $(sizeof(long long int)) byte(s)"
-echo "Size of a float: $(sizeof(float)) byte(s)"
-echo "Size of a double: $(sizeof(double)) byte(s)"
-echo "Size of a long double: $(sizeof(long double)) byte(s)"
-echo 0
+#include <stdio.h>
+
+int main() {
+    printf("Size of a char: %ld byte(s)\n", sizeof(char));
+    printf("Size of an int: %ld byte(s)\n", sizeof(int));
+    printf("Size of a long int: %ld byte(s)\n", sizeof(long int));
+    printf("Size of a long long int: %ld byte(s)\n", sizeof(long long int));
+    printf("Size of a float: %ld byte(s)\n", sizeof(float));
+    printf("Size of a double: %ld byte(s)\n", sizeof(double));
+    printf("Size of a long double: %ld byte(s)\n", sizeof(long double));
+    return 0;
+}
+
