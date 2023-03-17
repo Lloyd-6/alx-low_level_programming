@@ -1,16 +1,29 @@
-#!/bin/bash
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
 
-# Generate a random number between 0 and RAND_MAX
-n=$(( $RANDOM % $RAND_MAX ))
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int n;
 
-# Check if the number is positive, negative or zero
-if [ $n -gt 0 ]
-then
-    echo "$n is positive"
-elif [ $n -eq 0 ]
-then
-    echo "$n is zero"
-else
-    echo "$n is negative"
-fi
-
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n > 0)
+	{
+		printf("%d is positive\n", n);
+	}
+	else if (n < 0)
+	{
+		printf("%d is negative\n", n);
+	}
+	else
+	{
+		printf("%d is zero\n", n);
+	}
+	return (0);
+}
