@@ -13,3 +13,7 @@ int _putchar(char c)
         return (write(1, &c, 1));
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6dfb6d1a770e26c5a56f426835b9c3892c12b0e6
